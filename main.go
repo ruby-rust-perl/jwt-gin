@@ -1,9 +1,8 @@
 package main
 
 import (
-	"jwt-gin/models"
-
 	"jwt-gin/controllers"
+	"jwt-gin/models"
 
 	"github.com/gin-gonic/gin"
 )
@@ -17,6 +16,7 @@ func main() {
 	public := r.Group("/api")
 
 	public.POST("/register", controllers.Register)
+	public.POST("/login", controllers.Login)
 
 	r.Run(":8080")
 
