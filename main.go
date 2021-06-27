@@ -1,12 +1,16 @@
 package main
 
 import (
+	"jwt-gin/models"
+
 	"jwt-gin/controllers"
 
 	"github.com/gin-gonic/gin"
 )
 
 func main() {
+
+	models.ConnectDataBase()
 
 	r := gin.Default()
 
